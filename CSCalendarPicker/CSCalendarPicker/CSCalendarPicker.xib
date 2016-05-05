@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CSCalendarPicker">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7T-DV-XbT">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="CoverClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="6wY-GN-Eh0"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2N-xl-6oN">
+                    <rect key="frame" x="10" y="48" width="460" height="504"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ck4-VT-h7V" customClass="CSHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="460" height="44"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-0z-Apd">
+                                    <rect key="frame" x="5" y="43" width="450" height="1"/>
+                                    <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="wI2-Qf-dLe"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="XFH-0z-Apd" secondAttribute="trailing" constant="5" id="1lc-Br-8V1"/>
+                                <constraint firstItem="XFH-0z-Apd" firstAttribute="leading" secondItem="Ck4-VT-h7V" secondAttribute="leading" constant="5" id="5PO-UJ-4Jh"/>
+                                <constraint firstAttribute="bottom" secondItem="XFH-0z-Apd" secondAttribute="bottom" id="RJ5-dH-41L"/>
+                                <constraint firstAttribute="height" constant="44" id="qyS-4K-V2Q"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBH-Fp-B4Z">
+                            <rect key="frame" x="5" y="464" width="450" height="35"/>
+                            <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="kuA-yc-RB9"/>
+                            </constraints>
+                            <state key="normal" title="确定"/>
+                            <connections>
+                                <action selector="determineBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="sNA-bF-rmD"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FkB-9T-pn8" customClass="CSPickerView">
+                            <rect key="frame" x="0.0" y="44" width="460" height="420"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ck4-VT-h7V" firstAttribute="leading" secondItem="O2N-xl-6oN" secondAttribute="leading" id="H3O-Gm-iY3"/>
+                        <constraint firstAttribute="trailing" secondItem="yBH-Fp-B4Z" secondAttribute="trailing" constant="5" id="NUo-8I-xKS"/>
+                        <constraint firstItem="Ck4-VT-h7V" firstAttribute="top" secondItem="O2N-xl-6oN" secondAttribute="top" id="XuU-Uw-tNr"/>
+                        <constraint firstItem="FkB-9T-pn8" firstAttribute="leading" secondItem="O2N-xl-6oN" secondAttribute="leading" id="c8i-Xs-McW"/>
+                        <constraint firstItem="FkB-9T-pn8" firstAttribute="top" secondItem="Ck4-VT-h7V" secondAttribute="bottom" id="gSH-8E-yn8"/>
+                        <constraint firstItem="yBH-Fp-B4Z" firstAttribute="leading" secondItem="O2N-xl-6oN" secondAttribute="leading" constant="5" id="jtt-uB-qtZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Ck4-VT-h7V" secondAttribute="trailing" id="kKs-jX-aQj"/>
+                        <constraint firstItem="yBH-Fp-B4Z" firstAttribute="top" secondItem="FkB-9T-pn8" secondAttribute="bottom" id="ldo-wh-6Wo"/>
+                        <constraint firstAttribute="width" secondItem="O2N-xl-6oN" secondAttribute="height" constant="-44" id="n3D-NG-5nz"/>
+                        <constraint firstAttribute="bottom" secondItem="yBH-Fp-B4Z" secondAttribute="bottom" constant="5" id="u0b-sa-7vC"/>
+                        <constraint firstAttribute="trailing" secondItem="FkB-9T-pn8" secondAttribute="trailing" id="yKa-4D-lhO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="O2N-xl-6oN" secondAttribute="trailing" constant="10" id="B0q-Mz-uwb"/>
+                <constraint firstItem="b7T-DV-XbT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="B1r-cJ-h2h"/>
+                <constraint firstItem="b7T-DV-XbT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="D2X-3Y-u51"/>
+                <constraint firstItem="O2N-xl-6oN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="WkH-OI-e6O"/>
+                <constraint firstAttribute="trailing" secondItem="b7T-DV-XbT" secondAttribute="trailing" id="bzy-an-Kgp"/>
+                <constraint firstAttribute="bottom" secondItem="b7T-DV-XbT" secondAttribute="bottom" id="ubM-BM-vYi"/>
+                <constraint firstItem="O2N-xl-6oN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="zLB-xN-d3o"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="confirmBtn" destination="yBH-Fp-B4Z" id="TlL-cG-dB3"/>
+                <outlet property="headerView" destination="Ck4-VT-h7V" id="YRX-uf-pQw"/>
+                <outlet property="horizontalLine" destination="XFH-0z-Apd" id="vYB-Bv-TUh"/>
+            </connections>
+            <point key="canvasLocation" x="522" y="468"/>
+        </view>
+    </objects>
+</document>
